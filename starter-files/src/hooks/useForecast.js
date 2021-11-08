@@ -12,7 +12,7 @@ const REQUEST_URL = `${CROSS_DOMAIN}/${BASE_URL}`;
 const useForecast = () => {
     const [isError, setError] = useState(false);
     const [isLoading, setLoading] = useState(false);
-    const [Forecast, setForecast] = useState(null);
+    const [forecast, setForecast] = useState(null);
 
     const getWoeid = async location => {
         const { data } = await axios(`${REQUEST_URL}/search`, { params: { query: location } });
@@ -36,6 +36,7 @@ const useForecast = () => {
         }
 
         return data;
+        // console.log(data);
     };
 
     const gatherForecastData = data => {
@@ -63,7 +64,7 @@ const useForecast = () => {
     return {
         isError,
         isLoading,
-        Forecast,
+        forecast,
         submitRequest,
     };
 };

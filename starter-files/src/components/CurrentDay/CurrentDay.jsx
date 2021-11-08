@@ -31,7 +31,7 @@ CurrentDay.propTypes = {
     weekday: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
-    temperature: PropTypes.number.isRequired,
+    temperature: PropTypes.number.isRequired,  
     weatherIcon: PropTypes.string.isRequired,
     weatherDescription: PropTypes.string.isRequired,
 };
