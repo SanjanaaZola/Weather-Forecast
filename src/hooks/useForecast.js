@@ -36,7 +36,6 @@ const useForecast = () => {
         }
 
         return data;
-        // console.log(data);
     };
 
     const gatherForecastData = data => {
