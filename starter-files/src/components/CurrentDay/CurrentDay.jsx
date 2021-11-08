@@ -21,6 +21,7 @@ const CurrentDay = ({ weekday, date, location, temperature, weatherIcon, weather
                 <h2 className="font-weight-bold mb-1">
                     <span>{temperature}</span>°C
                 </h2>
+                <h5 className='font-weight-lighter'>{weatherDescription}</h5>
             </div>
         </div>
     </div>

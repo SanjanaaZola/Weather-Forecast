@@ -10,8 +10,8 @@ const CROSS_DOMAIN = 'https://the-ultimate-api-challenge.herokuapp.com';
 const REQUEST_URL = `${CROSS_DOMAIN}/${BASE_URL}`;
 
 const useForecast = () => {
-    const [Error, setError] = useState(false);
-    const [Loading, setLoading] = useState(false);
+    const [isError, setError] = useState(false);
+    const [isLoading, setLoading] = useState(false);
     const [Forecast, setForecast] = useState(null);
 
     const getWoeid = async location => {
@@ -34,7 +34,7 @@ const useForecast = () => {
             setLoading(false);
             return;
         }
-        
+
         return data;
     };
 
@@ -61,8 +61,8 @@ const useForecast = () => {
     };
 
     return {
-        Error,
-        Loading,
+        isError,
+        isLoading,
         Forecast,
         submitRequest,
     };

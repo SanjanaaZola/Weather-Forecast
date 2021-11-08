@@ -8,7 +8,6 @@ import CurrentDayDescription from '../CurrentDayDescription';
 import UpcomingDaysForecast from '../UpcomingDaysForecast';
 
 import styles from './Forecast.module.css';
-import { propTypes } from 'react-bootstrap/esm/Image';
 
 const Forecast = ({ forecast }) => (
     <Container className={styles.box}>
@@ -18,7 +17,10 @@ const Forecast = ({ forecast }) => (
                     <CurrentDay {...forecast.currentDay} />
                 </div>
             </Col>
-            <Col xs={12} md={8} className="d-flex flex-column justify-content-between"></Col>
+            <Col xs={12} md={8} className="d-flex flex-column justify-content-between">
+                <CurrentDayDescription forecast={forecast.currentDayDetails} />
+                <UpcomingDaysForecast days={forecast.upcomingDays} />
+            </Col>
         </Row>
     </Container>
 );
@@ -30,4 +32,5 @@ Forecast.propTypes = {
         upcomingDays: PropTypes.array,
     }),
 };
+
 export default Forecast;
