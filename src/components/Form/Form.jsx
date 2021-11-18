@@ -20,6 +20,7 @@ const Form = ({ submitSearch }) => {
                 required
                 value={location}
                 onChange={e => setLocation(e.target.value)}
+                name="city"
             />
 
             <button type="submit" className={styles.button} onClick={onSubmit}>
